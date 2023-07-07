@@ -1,6 +1,6 @@
 function fetchQuote() {
-  // fetch("https://type.fit/api/quotes")
-  fetch("p4_myQuotes.json")
+  // fetch("p4_myQuotes.json")
+  fetch("https://type.fit/api/quotes")
     .then(function (response) {
       return response.json();
     })
