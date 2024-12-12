@@ -1,4 +1,4 @@
-import { API_KEY, UNSPLASH_ACCESS_KEY } from "./config.js";
+// import { API_KEY, UNSPLASH_ACCESS_KEY } from "./config.js";
 
 async function fetchQuote() {
   // fetch("p4_myQuotes.json")
