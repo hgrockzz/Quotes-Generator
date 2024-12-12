@@ -18,9 +18,12 @@ jobs:
           echo "export const API_KEY = '${{ secrets.NINJA_API_KEY }}';" > ./config.js
           echo "export const UNSPLASH_ACCESS_KEY = '${{ secrets.UNSPLASH_ACCESS_KEY }}';" >> ./config.js
 
+      - name: Debug file structure
+        run: ls -R .
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           publish_branch: gh-pages
           publish_dir: .
