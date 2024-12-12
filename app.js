@@ -1,4 +1,4 @@
-// import { API_KEY, UNSPLASH_ACCESS_KEY } from "./config.js";
+import { API_KEY, UNSPLASH_ACCESS_KEY } from "./config.js";
 
 async function fetchQuote() {
   // fetch("p4_myQuotes.json")
@@ -7,7 +7,7 @@ async function fetchQuote() {
     const result = await fetch("https://api.api-ninjas.com/v1/quotes", {
       method: "GET",
       headers: {
-        "X-Api-Key": process.env.API_KEY,
+        "X-Api-Key": API_KEY,
       },
     });
     if (result.ok) {
@@ -33,7 +33,7 @@ async function fetchQuote() {
 async function fetchUnsplashImage(category) {
   try {
     const unsplashResponse = await fetch(
-      `https://api.unsplash.com/search/photos?query=${category}&client_id=${process.env.UNSPLASH_ACCESS_KEY}`
+      `https://api.unsplash.com/search/photos?query=${category}&client_id=${UNSPLASH_ACCESS_KEY}`
     );
 
     if (!unsplashResponse.ok) {
